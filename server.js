@@ -3,8 +3,11 @@ const app = express();
 const db = require("./db");
 require('dotenv').config();
 
-const bodyParser = require("body-parser");
-app.use(bodyParser.json()); // store inside req.body
+// const bodyParser = require("body-parser");
+// app.use(bodyParser.json()); // store inside req.body
+
+app.use(express.json());
+
 const PORT = process.env.PORT || 3000;
 
 
