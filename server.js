@@ -3,9 +3,12 @@ const app = express();
 const db = require("./db");
 require('dotenv').config();
 
+
+// body parser old
 // const bodyParser = require("body-parser");
 // app.use(bodyParser.json()); // store inside req.body
 
+// body parser new
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
